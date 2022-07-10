@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Task-2
+
+### For S3: http://cloudx-aws-practitioner.s3-website-eu-west-1.amazonaws.com/
+Should return 403 error
+### For CloudFront: https://do3m0x6448pp0.cloudfront.net/
+
 ## Available Scripts
 
 In the project directory, you can run:  
