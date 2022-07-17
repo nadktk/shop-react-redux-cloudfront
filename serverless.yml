@@ -1,12 +1,13 @@
-service: node-in-aws-web
+service: cloudx-aws-fe
 
 frameworkVersion: '2'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
+  region: eu-west-1
   # setup profile for AWS CLI.
-  # profile: node-aws
+  profile: personal-1
 
 plugins:
   - serverless-finch
@@ -17,7 +18,7 @@ plugins:
 
 custom:
   client:
-    bucketName: node-in-aws-web-bucket
+    bucketName: cloudx-aws-fe
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -35,8 +36,8 @@ resources:
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html
-        # VersioningConfiguration:
-        #   Status: Enabled
+        VersioningConfiguration:
+          Status: Enabled
 
     ## Specifying the policies to make sure all files inside the Bucket are avaialble to CloudFront
     WebAppS3BucketPolicy:
