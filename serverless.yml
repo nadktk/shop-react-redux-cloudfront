@@ -1,4 +1,4 @@
-service: cloudx-aws-course
+service: cloudx-aws-fe
 
 frameworkVersion: '2'
 
@@ -18,7 +18,7 @@ plugins:
 
 custom:
   client:
-    bucketName: cloudx-aws-course
+    bucketName: cloudx-aws-fe
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
